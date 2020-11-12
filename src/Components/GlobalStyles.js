@@ -17,6 +17,19 @@ const globalStyles = createGlobalStyle`
         color:white;
         padding-top:80px;
     }
+    @keyframes loadingA {
+      0% {
+        height: 15px;
+      }
+      50% {
+        height: 35px;
+      }
+      100% {
+        height: 15px;
+      }
+    }
+
+
 `;
 
 export default globalStyles;
