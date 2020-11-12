@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/graeflix/static/js/main.038d0fde.chunk.js",
-    "main.js.map": "/graeflix/static/js/main.038d0fde.chunk.js.map",
+    "main.js": "/graeflix/static/js/main.1ec48587.chunk.js",
+    "main.js.map": "/graeflix/static/js/main.1ec48587.chunk.js.map",
     "runtime-main.js": "/graeflix/static/js/runtime-main.51d32e3c.js",
     "runtime-main.js.map": "/graeflix/static/js/runtime-main.51d32e3c.js.map",
-    "static/js/2.f3c5c6f7.chunk.js": "/graeflix/static/js/2.f3c5c6f7.chunk.js",
-    "static/js/2.f3c5c6f7.chunk.js.map": "/graeflix/static/js/2.f3c5c6f7.chunk.js.map",
+    "static/js/2.d4f4ef43.chunk.js": "/graeflix/static/js/2.d4f4ef43.chunk.js",
+    "static/js/2.d4f4ef43.chunk.js.map": "/graeflix/static/js/2.d4f4ef43.chunk.js.map",
     "index.html": "/graeflix/index.html",
-    "static/js/2.f3c5c6f7.chunk.js.LICENSE.txt": "/graeflix/static/js/2.f3c5c6f7.chunk.js.LICENSE.txt"
+    "static/js/2.d4f4ef43.chunk.js.LICENSE.txt": "/graeflix/static/js/2.d4f4ef43.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.51d32e3c.js",
-    "static/js/2.f3c5c6f7.chunk.js",
-    "static/js/main.038d0fde.chunk.js"
+    "static/js/2.d4f4ef43.chunk.js",
+    "static/js/main.1ec48587.chunk.js"
   ]
 }
