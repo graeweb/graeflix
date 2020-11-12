@@ -8,7 +8,7 @@ import Message from "Components/Message";
 import Poster from "Components/Poster";
 
 const Container = styled.div`
-  padding: 0px 20px;
+  padding: 20px;
 `;
 
 const Form = styled.form`
@@ -18,8 +18,23 @@ const Form = styled.form`
 
 const Input = styled.input`
   all: unset;
-  font-size: 28px;
-  width: 100%;
+  font-size: 18px;
+  width: 50%;
+  background: transparent;
+  color: #fff;
+  appearance: none;
+  border: 0;
+  border: 2px solid rgba(220,220,220, .1);
+  outline: none;
+  border-radius: 37px;
+  padding: 10px 20px;
+  pointer-events: all;
+  transition: border .25s ease, width .125s ease .125s;
+  
+  &:focus {
+    border: 2px solid red;
+    width: 70%;
+  }
 `;
 
 const SearchPresenter = ({
@@ -55,7 +70,7 @@ const SearchPresenter = ({
                 imageUrl={movie.poster_path}
                 title={movie.original_title}
                 rating={movie.vote_average}
-                year={movie.release_date.substring(0, 4)}
+                year={movie.release_date}
                 isMovie={true}
               />
             ))}
@@ -70,7 +85,7 @@ const SearchPresenter = ({
                 imageUrl={show.poster_path}
                 title={show.original_name}
                 rating={show.vote_average}
-                year={show.first_air_date.substring(0, 4)}
+                year={show.first_air_date}
               />
             ))}
           </Section>

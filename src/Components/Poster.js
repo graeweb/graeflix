@@ -4,28 +4,28 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
-  font-size:12px;
+  font-size: 12px;
 `;
-
 
 const Image = styled.div`
   background-image: url(${props => props.bgUrl});
-  height:180px;
-  background-size:cover;
-  background-position:center center;
-  border-radius:4px;  
-  transition:opacity .1s linear;
+  height: 180px;
+  background-size: cover;
+  border-radius: 4px;
+  background-position: center center;
+  transition: opacity 0.1s linear;
 `;
 
 const Rating = styled.span`
   bottom: 5px;
   right: 5px;
-  position:absolute;
-  opacity:0;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.1s linear;
 `;
 
 const ImageContainer = styled.div`
-  margin-bottom:5px;
+  margin-bottom: 5px;
   position: relative;
   &:hover {
     ${Image} {
@@ -37,29 +37,28 @@ const ImageContainer = styled.div`
   }
 `;
 
-
 const Title = styled.span`
-  display:block;
-  margin-bottom:35px;
+  display: block;
+  margin-bottom: 3px;
 `;
+
 const Year = styled.span`
-  font-size:10px;
-  color:rgba(255,255,255,.5)
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
 `;
 
-
-
-const Poster =({id, imageUrl, title, rating, year , isMovie = false}) =>(
+const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
   <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
     <Container>
       <ImageContainer>
-      <Image
+        <Image
           bgUrl={
             imageUrl
               ? `https://image.tmdb.org/t/p/w300${imageUrl}`
               : require("../assets/noPosterSmall.jpg").default
           }
         />
+
         <Rating>
           <span role="img" aria-label="rating">
             ⭐️
@@ -67,7 +66,9 @@ const Poster =({id, imageUrl, title, rating, year , isMovie = false}) =>(
           {rating}/10
         </Rating>
       </ImageContainer>
-      <Title>{title.length > 18 ? `${title.substring(0,18)}...`: title}</Title>
+      <Title>
+        {title.length > 18 ? `${title.substring(0, 18)}...` : title}
+      </Title>
       <Year>{year}</Year>
     </Container>
   </Link>
@@ -77,7 +78,7 @@ Poster.propTypes = {
   id: PropTypes.number.isRequired,
   imageUrl: PropTypes.string,
   title: PropTypes.string.isRequired,
-  rating:PropTypes.number,
+  rating: PropTypes.number,
   year: PropTypes.string,
   isMovie: PropTypes.bool
 };
